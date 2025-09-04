@@ -12,8 +12,7 @@
                     <form method="POST" action="{{ route('tasks.update', $task) }}">
                         @csrf
                         @method('PUT')
-                        
-                        <div class="mb-4">
+                        <div class="mb-5">
                             <x-input-label for="title" :value="__('Title')" />
                             <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title', $task->title)" required autofocus />
                             <x-input-error :messages="$errors->get('title')" class="mt-2" />
